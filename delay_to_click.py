@@ -3,16 +3,13 @@ from datetime import datetime, timedelta
 
 # 現在時間 - 等多少時間後click - 軍隊行軍時間 - 到達攻城時間
 
-# 實驗結果:以下設定要設定在實際攻城時間-1秒, 戰報的時間會剛好
-# 例如攻城時間為晚上九點, 以下變數要設定des_hour=20, des_min=59, des_sec=59
-
 # 攻城時間 時 分 秒
 des_hour = 22  # TODO need to modify
-des_min = 28  # TODO need to modify
-des_sec = 59  # TODO need to modify
+des_min = 0  # TODO need to modify
+des_sec = 0  # TODO need to modify
 
 # 軍隊行軍時間(單位:秒)
-army_need_secs = 30  # TODO need to modify
+army_need_secs = 24  # TODO need to modify
 
 start = datetime.now()
 print(f'program start time : {start}')
