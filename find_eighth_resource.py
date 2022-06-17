@@ -35,7 +35,11 @@ while True:
                                                    confidence=0.7)
         if target_location is not None:
             pyautogui.moveTo(target_location.left, target_location.top)
-            is_target_found = True
+            pyautogui.click()
+            if not pyautogui.locateOnScreen(r'images\mail_icon.png',
+                                            confidence=0.7):
+                is_target_found = True
+            break
     if is_target_found:
         break
     time.sleep(2)
