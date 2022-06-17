@@ -38,3 +38,4 @@ while True:
             is_target_found = True
     if is_target_found:
         break
+    time.sleep(2)
