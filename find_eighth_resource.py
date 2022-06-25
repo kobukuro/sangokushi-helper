@@ -1,6 +1,7 @@
 import time
 import pyautogui
 
+# 此程式還有待改進
 # region direction
 TOP = 1
 DOWN = 2
