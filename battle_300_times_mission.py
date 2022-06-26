@@ -21,14 +21,14 @@ import easyocr
 # 一開始把武將全部清空, 然後都要設定為騎兵, 剛開始要先點主城座標 # TODO
 # 記得輸入法為英數 # TODO
 # 敵人座標
-ENEMY_X, ENEMY_Y = 1194, 601
+ENEMY_X, ENEMY_Y = 1194, 601  # TODO
 # 主城座標
-CASTLE_X, CASTLE_Y = 958, 495
+CASTLE_X, CASTLE_Y = 958, 495  # TODO
 # 填兵力數字的座標
 SOLDIERS_NUMBER_X, SOLDIERS_NUMBER_Y = 786, 676
 # 50分鐘為3000(等武將回滿體力15需要45分鐘, 保險起見用50分鐘)
 WAIT_SECONDS = 3000  # 15分鐘:900(重傷恢復所需時間)
-IS_CLICK_DAILY = False  # 是否為午夜前開始執行，是的話，必須把每日獎勵點掉
+IS_CLICK_DAILY = True  # 是否為午夜前開始執行，是的話，必須把每日獎勵點掉 # TODO
 
 
 def program_without_ocr():
@@ -39,7 +39,7 @@ def program_without_ocr():
         time_now = datetime.now()
         while True:
             time.sleep(1)
-            if time_now.hour == 0 and time_now.minute == 10:  # 午夜零點10分
+            if time_now.hour == 0 and time_now.minute == 7:  # 午夜零點7分
                 break
             time_now = datetime.now()
         join_army_position = pyautogui.locateCenterOnScreen('images\\daily_award_confirm.png')
